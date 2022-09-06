@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/avatar_pic"
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="313dp"
+            android:layout_toStartOf="@+id/Star_img"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/woman"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="6dp" />
+
+
+        <ImageView
+            android:id="@+id/Star_img"
+            android:layout_width="28dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/star"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.946"
+            app:layout_constraintStart_toEndOf="@+id/avatar_pic"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+        <TextView
+            android:id="@+id/textPost"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:layout_below="@+id/avatar_pic"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="11dp"
+            android:paddingTop="15dp"
+            android:text="This is the Discussion box, make it more awesome by exploring knowledge with us."
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/avatar_pic"
+            app:layout_constraintTop_toTopOf="@id/avatar_pic" />
+
+        <TextView
+            android:id="@+id/Username"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_alignStart="@+id/Star_img"
+            android:layout_alignBottom="@+id/avatar_pic"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="-297dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="-158dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="13dp"
+            android:layout_toStartOf="@+id/avatar_pic"
+            android:layout_toRightOf="@id/avatar_pic"
+            android:text="Alexa"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPost"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageView
+            android:id="@+id/likes"
+            android:layout_width="30dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="25dp"
+            android:src="@drawable/like" />
+
+        <ImageView
+            android:id="@+id/comment"
+            android:layout_width="30dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/comment" />
+
+        <ImageView
+            android:id="@+id/shareit"
+            android:layout_width="30dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/share" />
+
+
+        <ImageView
+            android:id="@+id/alert_box"
+            android:layout_width="30dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="178dp"
+            android:src="@drawable/alert"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
