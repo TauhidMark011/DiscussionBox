@@ -1,7 +1,7 @@
 package com.example.discusssionbox
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.discusssionbox.ui.Box
@@ -16,10 +16,11 @@ class MainActivity : AppCompatActivity() {
    private lateinit var name : Array<String>
    private lateinit var rating : Array<Int>
    private lateinit var posting : Array<String>
+   private lateinit var PostImage : Array<Int>
    private lateinit var likes : Array<Int>
    private lateinit var comment : Array<Int>
    private lateinit var share : Array<Int>
-   private lateinit var alertBox : Array<Int>
+   //private lateinit var alertBox : Array<Int>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,6 +76,17 @@ class MainActivity : AppCompatActivity() {
             "students would be ready to embark on quantitative thinking in various topics of biology and medicine"
         )
 
+        PostImage = arrayOf(
+            R.drawable.posting_img,
+            R.drawable.maths,
+            R.drawable.rieman,
+            R.drawable.sum,
+            R.drawable.posting_img,
+            R.drawable.maths,
+            R.drawable.rieman
+
+        )
+
         likes = arrayOf(
 
             R.drawable.star,
@@ -108,17 +120,17 @@ class MainActivity : AppCompatActivity() {
             R.drawable.share,
         )
 
-        alertBox = arrayOf(
-
-            R.drawable.alert,
-            R.drawable.alert,
-            R.drawable.alert,
-            R.drawable.alert,
-            R.drawable.alert,
-            R.drawable.alert,
-            R.drawable.alert,
-
-        )
+//        alertBox = arrayOf(
+//
+//            R.drawable.alert,
+//            R.drawable.alert,
+//            R.drawable.alert,
+//            R.drawable.alert,
+//            R.drawable.alert,
+//            R.drawable.alert,
+//            R.drawable.alert,
+//
+//        )
 
         boxAdapter = BoxAdapter(boxList)
         recyclerView.adapter = boxAdapter
@@ -135,7 +147,7 @@ class MainActivity : AppCompatActivity() {
     private fun getUserdata() {
         for(i in imageId.indices){
 
-            val box = Box(imageId[i],name[i],posting[i],likes[i],comment[i],share[i],rating[i],alertBox[i])
+            val box = Box(imageId[i],name[i],posting[i],PostImage[i], likes[i],comment[i],share[i],rating[i])
             boxList.add(box)
 
         }

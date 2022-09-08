@@ -9,7 +9,7 @@ class Box(
     var comment: Int,
     var share: Int,
     var postImage: Int,
-    val rating: Int
+    var rating: Int
 ) {
 
 }
